@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+data/*.jsonl
+outputs/
+.venv/
+venv/
+
+# 2026-09-18: 가상환경/캐시/자동생성 파일
+.ipynb_checkpoints/
+
+# 노트북 실행 중 재생성되는 대용량 산출물 (01/02번 노트북을 다시 실행하면 재생성됨,
+# 각 노트북 안에 결과/그래프가 이미 실행된 상태로 저장돼 있어 git에는 필요 없음)
+dataset/processed/
+
+# 모델 체크포인트 (용량 매우 큼 - 수 GB, git에 올리기 부적합, 03~06번 노트북을 다시 실행하면 재생성됨)
+checkpoints/
+
+# 로컬 전용 Claude Code 설정 (사용자/머신마다 다름)
+.claude/settings.local.json

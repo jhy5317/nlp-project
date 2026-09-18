@@ -1,0 +1,161 @@
+# 2026-09-18: 프로젝트 가상환경(.venv, Python 3.11) 패키지 전체 목록 (uv pip freeze)
+#
+# 설치 방법:
+#   uv venv --python 3.11 .venv
+#   uv pip install --python .venv/Scripts/python.exe torch --index-url https://download.pytorch.org/whl/cu128
+#   uv pip install --python .venv/Scripts/python.exe -r requirements.txt
+#
+# 주의:
+# - torch(2.11.0+cu128, CUDA 12.8 빌드)는 PyPI가 아니라 https://download.pytorch.org/whl/cu128 에서 받아야 하므로,
+#   위처럼 torch만 먼저 --index-url로 설치한 뒤 나머지를 설치한다.
+# - GPU별 안내:
+#   * RTX 50 시리즈(Blackwell, 이 개발 컴퓨터의 RTX 5060): 반드시 cu128 이상 필요 (cu126 이하는 아키텍처 미지원).
+#   * RTX 40 시리즈(Ada Lovelace) 등 그 이전 세대: cu128로도 문제없이 동작한다 - 이 태그는 "이 GPU 세대 전용"이 아니라
+#     "이 빌드가 지원하는 최신 CUDA 툴킷 버전"이며 이전 세대 GPU와도 호환된다. 다만 cu128은 비교적 최근 NVIDIA
+#     드라이버(2025년 초 이후)가 필요하므로, 만약 드라이버가 오래돼 GPU 인식에 실패하면 아래처럼 cu126으로 대체한다:
+#       uv pip install --python .venv/Scripts/python.exe torch --index-url https://download.pytorch.org/whl/cu126
+#   * GPU가 없거나 CPU만 쓸 경우: --index-url 없이 `pip install torch`로 대체 가능.
+#   * 설치 후 `python -c "import torch; print(torch.cuda.is_available())"`로 GPU 인식 여부를 꼭 확인한다.
+# - KoNLPy(Okt)는 JVM이 필요하다 (Java/OpenJDK 설치 필요, pip만으로는 해결되지 않음).
+# - 한글이 포함된 matplotlib 플롯을 그리려면 Windows의 맑은 고딕(Malgun Gothic) 폰트가 필요하다 (OS 기본 제공).
+
+absl-py==2.5.0
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+asttokens==3.0.2
+attrs==26.1.0
+blis==1.3.3
+catalogue==2.0.10
+certifi==2026.7.22
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpathlib==0.25.0
+cloudpickle==3.1.2
+colorama==0.4.6
+comm==0.2.3
+confection==1.3.3
+contourpy==1.3.3
+cycler==0.12.1
+cymem==2.0.13
+dataclasses==0.8
+datasets==5.0.1
+debugpy==1.8.22
+defusedxml==0.7.1
+dill==0.4.1
+et-xmlfile==2.0.0
+evaluate==0.4.6
+executing==2.2.1
+fastjsonschema==2.22.2
+filelock==3.32.3
+fonttools==4.65.0
+frozenlist==1.8.0
+fsspec==2026.6.0
+gensim==4.4.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface-hub==1.31.0
+idna==3.19
+ipykernel==7.3.0
+ipython==9.17.1
+ipython-pygments-lexers==1.1.1
+jamo==0.4.1
+jedi==0.20.0
+jinja2==3.1.6
+joblib==1.6.0
+jpype1==1.7.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+jupyter-client==8.10.0
+jupyter-core==5.9.1
+kiwisolver==1.5.1
+konlpy==0.6.0
+korpora==0.2.0
+lxml==6.1.3
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+matplotlib==3.11.2
+matplotlib-inline==0.2.2
+mdurl==0.1.2
+mpmath==1.3.0
+multidict==6.8.0
+multiprocess==0.70.19
+murmurhash==1.0.15
+narwhals==2.26.0
+nbclient==0.11.0
+nbformat==5.11.1
+nest-asyncio2==1.7.2
+networkx==3.6.1
+nltk==3.10.3
+numpy==2.4.6
+openpyxl==3.1.5
+packaging==26.3
+pandas==3.0.5
+parso==0.8.7
+pillow==12.3.0
+platformdirs==4.11.9
+portalocker==4.3.2
+preshed==3.0.13
+prompt-toolkit==3.0.53
+propcache==0.5.4
+protobuf==7.36.2
+psutil==7.2.2
+pure-eval==0.2.4
+pyarrow==25.0.1
+pydantic==2.13.5
+pydantic-core==2.46.5
+pygments==2.21.0
+pymupdf==1.28.2
+pyparsing==3.3.2
+pypdf==6.19.0
+python-dateutil==2.9.0.post0
+pyyaml==6.0.3
+pyzmq==27.2.0
+referencing==0.37.0
+regex==2026.9.10
+reportlab==5.0.1
+requests==2.34.2
+rich==15.0.0
+rouge-score==0.1.2
+rpds-py==2026.6.3
+sacrebleu==2.6.0
+safetensors==0.8.0
+scikit-learn==1.9.1
+scipy==1.17.1
+sentencepiece==0.2.2
+setuptools==78.1.0
+shellingham==1.5.4
+six==1.17.0
+smart-open==8.0.1
+spacy==3.8.16
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+srsly==2.5.3
+stack-data==0.6.3
+sympy==1.14.0
+tabulate==0.10.0
+thinc==8.3.13
+threadpoolctl==3.7.0
+tokenizers==0.23.2
+torch==2.11.0+cu128
+tornado==6.5.10
+tqdm==4.70.1
+traitlets==5.16.1
+transformers==5.17.0
+typer==0.27.2
+typing-extensions==4.16.0
+typing-inspection==0.4.4
+tzdata==2026.4
+urllib3==2.8.0
+wasabi==1.1.3
+wcwidth==0.8.3
+weasel==1.0.0
+wrapt==2.4.1
+xlrd==2.0.2
+xxhash==4.0.1
+yarl==1.25.1
