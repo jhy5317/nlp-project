@@ -1,0 +1,10 @@
+{
+  "구조": "인코더-디코더 Transformer (처음부터 학습)",
+  "파라미터 수": 6010688,
+  "d_model": 256,
+  "layers": "3/3",
+  "MAX_LEN": 16,
+  "학습 epoch": 117,
+  "best val_loss": 5.7957,
+  "epoch30 val_loss": 6.385
+}
