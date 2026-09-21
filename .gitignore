@@ -12,6 +12,9 @@ venv/
 # 각 노트북 안에 결과/그래프가 이미 실행된 상태로 저장돼 있어 git에는 필요 없음)
 dataset/processed/
 
+# 2026-09-21: 7:1:2 분할 변형(final_split_712.ipynb)의 전처리 산출물 - 위와 같은 이유로 제외
+dataset/processed_712/
+
 # 모델 체크포인트 (용량 매우 큼 - 수 GB, git에 올리기 부적합, 03~06번 노트북을 다시 실행하면 재생성됨)
 checkpoints/
 

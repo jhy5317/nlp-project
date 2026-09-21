@@ -1,0 +1,48 @@
+{
+  "비교 축": "learning rate / 스케줄 (그 외 조건 전부 고정)",
+  "학습 예산": {
+    "max_epochs": 10,
+    "patience": 3,
+    "batch_size": 16
+  },
+  "적용 디코딩": "beam5",
+  "configs": [
+    {
+      "config": "B2 lr=5e-5 +warmup",
+      "val_loss": 2.8525,
+      "epoch": 7,
+      "BLEU": 6.46,
+      "ROUGE-L": 24.01,
+      "Distinct-1": 0.141,
+      "Distinct-2": 0.36,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.022,
+      "평균길이": 6.1
+    },
+    {
+      "config": "B1 lr=2e-5 고정",
+      "val_loss": 2.9234,
+      "epoch": 9,
+      "BLEU": 5.75,
+      "ROUGE-L": 23.88,
+      "Distinct-1": 0.149,
+      "Distinct-2": 0.382,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.038,
+      "평균길이": 6.18
+    },
+    {
+      "config": "B0 lr=5e-5 고정",
+      "val_loss": 2.849,
+      "epoch": 6,
+      "BLEU": 5.45,
+      "ROUGE-L": 23.63,
+      "Distinct-1": 0.127,
+      "Distinct-2": 0.322,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.031,
+      "평균길이": 6.25
+    }
+  ],
+  "최종 선택": "B2 lr=5e-5 +warmup"
+}

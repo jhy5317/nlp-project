@@ -1,0 +1,18 @@
+{
+  "사전학습 모델": "gogamza/kobart-base-v2",
+  "파라미터 수": 123859968,
+  "베이스라인 대비 배수": 20.6,
+  "KOBART_MAX_LEN": 16,
+  "EOS 수정 전": {
+    "epoch": 7,
+    "best_val_loss": 2.9058
+  },
+  "EOS 수정 후": {
+    "epoch": 6,
+    "best_val_loss": 2.849
+  },
+  "베이스라인": {
+    "epoch": 78,
+    "best_val_loss": 6.0866
+  }
+}
