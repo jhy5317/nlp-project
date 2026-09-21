@@ -1,0 +1,262 @@
+{
+  "test_size": 1175,
+  "decoding": {
+    "baseline": "beam5(length_penalty=0.7)",
+    "pretrained": "beam5+no_repeat_ngram_size=3"
+  },
+  "metric_tokenization": "Okt 형태소 단위",
+  "models": [
+    {
+      "model": "KoBART B2 lr5e-5+warmup (06)",
+      "family": "전이학습",
+      "BLEU": 7.9,
+      "ROUGE-L": 25.14,
+      "Distinct-1": 0.223,
+      "Distinct-2": 0.51,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.017,
+      "평균길이": 6.22
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "family": "전이학습",
+      "BLEU": 7.72,
+      "ROUGE-L": 24.9,
+      "Distinct-1": 0.208,
+      "Distinct-2": 0.486,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.024,
+      "평균길이": 6.28
+    },
+    {
+      "model": "KoBART B1 lr2e-5 (06)",
+      "family": "전이학습",
+      "BLEU": 6.72,
+      "ROUGE-L": 24.18,
+      "Distinct-1": 0.218,
+      "Distinct-2": 0.496,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.031,
+      "평균길이": 6.21
+    },
+    {
+      "model": "A2 random lr3e-4 (06)",
+      "family": "베이스라인",
+      "BLEU": 4.87,
+      "ROUGE-L": 22.78,
+      "Distinct-1": 0.11,
+      "Distinct-2": 0.239,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.003,
+      "평균길이": 5.18
+    },
+    {
+      "model": "baseline-114ep (04)",
+      "family": "베이스라인",
+      "BLEU": 4.87,
+      "ROUGE-L": 22.99,
+      "Distinct-1": 0.128,
+      "Distinct-2": 0.303,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.014,
+      "평균길이": 5.18
+    },
+    {
+      "model": "baseline-30ep (03)",
+      "family": "베이스라인",
+      "BLEU": 2.64,
+      "ROUGE-L": 22.43,
+      "Distinct-1": 0.027,
+      "Distinct-2": 0.07,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.083,
+      "평균길이": 4.54
+    },
+    {
+      "model": "A1 word2vec lr1e-4 (06)",
+      "family": "베이스라인",
+      "BLEU": 2.5,
+      "ROUGE-L": 21.92,
+      "Distinct-1": 0.08,
+      "Distinct-2": 0.201,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.017,
+      "평균길이": 5.14
+    },
+    {
+      "model": "A0 random lr1e-4 (06)",
+      "family": "베이스라인",
+      "BLEU": 2.21,
+      "ROUGE-L": 21.04,
+      "Distinct-1": 0.048,
+      "Distinct-2": 0.1,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.008,
+      "평균길이": 5.18
+    },
+    {
+      "model": "KE-T5 lr5e-5+warmup (06)",
+      "family": "전이학습",
+      "BLEU": 0.09,
+      "ROUGE-L": 19.47,
+      "Distinct-1": 0.002,
+      "Distinct-2": 0.003,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.0,
+      "평균길이": 4.0
+    }
+  ],
+  "decoding_comparison": [
+    {
+      "model": "baseline-114ep (04)",
+      "decoding": "greedy",
+      "BLEU": 3.05,
+      "ROUGE-L": 20.61,
+      "Distinct-1": 0.148,
+      "Distinct-2": 0.425,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.121,
+      "평균길이": 6.65
+    },
+    {
+      "model": "baseline-114ep (04)",
+      "decoding": "beam5",
+      "BLEU": 4.87,
+      "ROUGE-L": 22.99,
+      "Distinct-1": 0.128,
+      "Distinct-2": 0.303,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.014,
+      "평균길이": 5.18
+    },
+    {
+      "model": "baseline-114ep (04)",
+      "decoding": "top-k50/top-p0.9",
+      "BLEU": 3.06,
+      "ROUGE-L": 20.01,
+      "Distinct-1": 0.186,
+      "Distinct-2": 0.563,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.106,
+      "평균길이": 6.7
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "decoding": "greedy",
+      "BLEU": 5.91,
+      "ROUGE-L": 24.98,
+      "Distinct-1": 0.225,
+      "Distinct-2": 0.558,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.026,
+      "평균길이": 5.85
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "decoding": "beam5",
+      "BLEU": 7.71,
+      "ROUGE-L": 24.68,
+      "Distinct-1": 0.206,
+      "Distinct-2": 0.481,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.024,
+      "평균길이": 6.33
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "decoding": "beam5+no_repeat_ngram3",
+      "BLEU": 7.72,
+      "ROUGE-L": 24.9,
+      "Distinct-1": 0.208,
+      "Distinct-2": 0.486,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.024,
+      "평균길이": 6.28
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "decoding": "top-k50/top-p0.9",
+      "BLEU": 5.01,
+      "ROUGE-L": 23.47,
+      "Distinct-1": 0.239,
+      "Distinct-2": 0.608,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.026,
+      "평균길이": 6.04
+    }
+  ],
+  "by_label": [
+    {
+      "model": "baseline-114ep (04)",
+      "label": 0,
+      "n": 529,
+      "BLEU": 8.05,
+      "ROUGE-L": 25.57,
+      "Distinct-1": 0.206,
+      "Distinct-2": 0.428,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.008,
+      "평균길이": 5.05
+    },
+    {
+      "model": "baseline-114ep (04)",
+      "label": 1,
+      "n": 350,
+      "BLEU": 2.46,
+      "ROUGE-L": 21.75,
+      "Distinct-1": 0.223,
+      "Distinct-2": 0.44,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.02,
+      "평균길이": 5.22
+    },
+    {
+      "model": "baseline-114ep (04)",
+      "label": 2,
+      "n": 296,
+      "BLEU": 2.44,
+      "ROUGE-L": 19.85,
+      "Distinct-1": 0.213,
+      "Distinct-2": 0.423,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.02,
+      "평균길이": 5.36
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "label": 0,
+      "n": 529,
+      "BLEU": 13.22,
+      "ROUGE-L": 28.73,
+      "Distinct-1": 0.304,
+      "Distinct-2": 0.607,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.025,
+      "평균길이": 5.86
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "label": 1,
+      "n": 350,
+      "BLEU": 3.55,
+      "ROUGE-L": 23.05,
+      "Distinct-1": 0.256,
+      "Distinct-2": 0.505,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.034,
+      "평균길이": 6.41
+    },
+    {
+      "model": "KoBART lr5e-5 (04)",
+      "label": 2,
+      "n": 296,
+      "BLEU": 3.64,
+      "ROUGE-L": 20.22,
+      "Distinct-1": 0.321,
+      "Distinct-2": 0.642,
+      "빈응답비율": 0.0,
+      "연속반복률": 0.01,
+      "평균길이": 6.89
+    }
+  ]
+}

@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project
 
 한국어 챗봇 응답 생성(Q→A) 과제: 토큰화 → 임베딩 → 사전학습 Transformer 전이학습 → 파인튜닝 → 평가 → 오류분석 → 발표.
-데이터는 `dataset/ChatbotData.csv` (Q, A, 감정 label 3종).
+데이터는 `dataset/ChatbotData.xlsx` (Q, A, 감정 label 3종).
 
 토큰화,임베딩, 토큰화를 어떤것을 선택해서할건지,
 인코더,디코더,에 대한 뭐라도 선택했을때 그 구조를 선택한 근거
